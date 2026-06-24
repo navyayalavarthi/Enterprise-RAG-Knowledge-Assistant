@@ -169,7 +169,7 @@ uvicorn src.api:app --reload --port 8006
 
 ## Skills Used
 
-Python · LangChain · OpenAI GPT · FAISS · Pinecone · FastAPI · AWS · HuggingFace · Sentence Transformers · Vector Databases · Prompt Engineering · Source Attribution · Conversational AI · Semantic Search · Jupyter
+Python · LangChain · OpenAI GPT · FAISS · Pinecone · FastAPI · AWS  · Sentence Transformers · Vector Databases · Prompt Engineering · Source Attribution · Conversational AI · Semantic Search · Jupyter
 
 ## Author
 
