@@ -26,7 +26,7 @@ databases, and LLMs. Built on a real 10-K annual report with dual vector databas
 | Vector DB Cloud | Pinecone — AWS us-east-1 — 358 vectors |
 | LLM | OpenAI gpt-4o-mini |
 | API Endpoints | /ask /chat /search /search/pinecone /health |
-
+```
 ## Architecture
 10-K Annual Report PDF
 ↓
@@ -58,6 +58,8 @@ POST /chat   — Conversational multi-turn
 POST /search — FAISS local semantic search
 POST /search/pinecone — Pinecone AWS cloud search
 GET  /health — System status
+```
+
 ## Tech Stack
 
 | Layer | Technology |
