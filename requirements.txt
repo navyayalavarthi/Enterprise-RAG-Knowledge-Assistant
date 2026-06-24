@@ -1,0 +1,17 @@
+langchain==0.3.25
+langchain-core==0.3.60
+langchain-community==0.3.24
+langchain-openai==0.3.18
+langchain-text-splitters==0.3.8
+sentence-transformers==3.0.1
+faiss-cpu
+pymupdf
+pypdf
+fastapi
+uvicorn
+python-multipart
+openai
+pinecone-client
+tiktoken
+boto3
+python-dotenv

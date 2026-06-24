@@ -1,0 +1,129 @@
+{
+  "timestamp": "2026-06-23T06:53:04.057165",
+  "project": "Enterprise RAG Knowledge Assistant",
+  "version": "3.0.0",
+  "document": "10-K Annual Report Q4 2023",
+  "pipeline": {
+    "ingestion": "PyPDFLoader \u2014 80 pages",
+    "chunking": "RecursiveCharacterTextSplitter \u2014 358 chunks",
+    "embeddings": "sentence-transformers/all-MiniLM-L6-v2 \u2014 384 dims",
+    "vector_db_local": "FAISS \u2014 358 vectors",
+    "vector_db_cloud": "Pinecone \u2014 358 vectors",
+    "llm": "OpenAI gpt-4o-mini",
+    "prompt_engineering": "Custom enterprise document prompt",
+    "source_attribution": "Page-level citation included",
+    "conversational": "ConversationBufferMemory multi-turn"
+  },
+  "health_check": {
+    "status": "ok",
+    "model": "gpt-4o-mini",
+    "faiss_vectors": 358,
+    "pinecone_connected": true,
+    "timestamp": "2026-06-23T06:52:30.754823"
+  },
+  "gpt_qa_results": [
+    {
+      "question": "What are the main business risks?",
+      "answer": "The main business risks identified in the document include:\n\n1. **Political and Economic Uncertainty**: Actions by governments in response to disputes and conflicts could be severe and restrictive, negatively impacting consumer confidence and spending (page not specified).\n\n2. **Natural Disasters**: Operations and facilities are located in areas prone to earthquakes and other natural disasters, which could disrupt business (page not specified).\n\n3. **Operational Interruptions**: Risks from fires, power shortages, industrial accidents, terrorist attacks, cybersecurity attacks, labor disputes, and public health issues can adversely affect operations (page not specified).\n\n4. **Economic Conditions**: Adverse economic conditions can lead to credit and collectibility risks, financial instability, limitations on issuing new debt, reduced liquidity, and declines in the fair values of financial instruments (page not specified).\n\n5. **Investment and Acquisition Risks**: Transactions may face risks such as failing to obtain regulatory approvals or facing onerous conditions that could delay or prevent completion (page not specified).\n\n6. **Retail Operations Risks**: The retail business is subject to various uncertainties and macroeconomic factors that could adversely impact operations and financial condition (page not specified).\n\n7. **Supply Chain Risks**: Reliance on single or limited sources for critical components means that disruptions could exacerbate negative consequences (page not specified).\n\n8. **Industrial Accidents**: Risks associated with industrial accidents at suppliers and contract manufacturers could disrupt business and harm reputation (page not specified).\n\n9. **Public Health Issues**: Major public health issues, including pandemics, can adversely affect the global economy and demand for consumer products (page not specified).",
+      "sources": [
+        "Page 14",
+        "Page 8",
+        "Page 7"
+      ]
+    },
+    {
+      "question": "What is the total revenue?",
+      "answer": "This information is not available in the document.",
+      "sources": [
+        "Page 49",
+        "Page 37"
+      ]
+    },
+    {
+      "question": "What are the future growth strategies?",
+      "answer": "This information is not available in the document.",
+      "sources": [
+        "Page 50",
+        "Page 8",
+        "Page 37"
+      ]
+    }
+  ],
+  "conversational_results": [
+    {
+      "turn": 1,
+      "question": "What is the net income?",
+      "answer": "I don't know.",
+      "sources": [
+        "Page 49",
+        "Page 41",
+        "Page 42"
+      ]
+    },
+    {
+      "turn": 2,
+      "question": "How does that compare to revenue?",
+      "answer": "I don't know.",
+      "sources": [
+        "Page 18",
+        "Page 49",
+        "Page 41"
+      ]
+    }
+  ],
+  "faiss_search": {
+    "query": "revenue growth strategy",
+    "total_found": 3,
+    "results": [
+      {
+        "page": 37,
+        "score": 1.0139
+      },
+      {
+        "page": 49,
+        "score": 1.0945
+      },
+      {
+        "page": 4,
+        "score": 1.1472
+      }
+    ]
+  },
+  "pinecone_search": {
+    "connected": true,
+    "total_found": 3,
+    "results": [
+      {
+        "page": 37,
+        "score": 0.4932
+      },
+      {
+        "page": 49,
+        "score": 0.453
+      },
+      {
+        "page": 4,
+        "score": 0.4259
+      }
+    ]
+  },
+  "api_endpoints": {
+    "/ask": "GPT Q&A with source attribution",
+    "/chat": "Conversational multi-turn Q&A",
+    "/search": "FAISS semantic search",
+    "/search/pinecone": "Pinecone cloud search",
+    "/health": "System health check"
+  },
+  "skills_covered": [
+    "Python",
+    "LangChain",
+    "OpenAI GPT-4o-mini",
+    "FAISS",
+    "Pinecone",
+    "FastAPI",
+    "Prompt Engineering",
+    "Source Attribution",
+    "Conversational AI",
+    "Vector Databases"
+  ]
+}
