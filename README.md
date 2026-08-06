@@ -176,8 +176,6 @@ Python · LangChain · OpenAI GPT · FAISS · Pinecone · FastAPI · AWS  · Sen
 ## Author
 
 Navya
-📧 navya.yalavarthi1@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/navya-yalavarthi-b21297289/
 
 ## License
 
